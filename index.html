@@ -110,11 +110,11 @@
   }
 
   /* Row of 3 fields on desktop */
-  .form-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-  }
+ .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px; /* ← key: more space between pills */
+}
 
   /* Labels (inside panel) */
   .form-panel .field label {
@@ -125,15 +125,17 @@
   }
 
   /* Inputs (inside panel) */
-  .form-panel .field input,
-  .form-panel .field textarea {
-    width: 100%;
-    padding: 12px 14px;
-    border: none;
-    border-radius: 12px;
-    font: inherit;
-    background: #fff;
-  }
+  .form-panel .field input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 999px; /* true pill */
+  border: none;
+  font: inherit;
+  background: #ffffff;
+
+  /* 👇 critical for visual separation */
+  box-shadow: 0 0 0 4px #0A8FCC;
+}
 
   .form-panel .field textarea {
     resize: vertical;
