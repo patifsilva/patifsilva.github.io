@@ -243,33 +243,8 @@
       </a>
    </p>
 
---FROM FREEFORM
-  <section id="contact">
-  <h2>Contact</h2>
-
-  <form action="https://formspree.io/f/xjgybzjr" method="POST">
-    <label>
-      Name
-      <input type="text" name="name" required>
-    </label>
-
-    <label>
-      Email
-      <input type="email" name="email" required>
-    </label>
-
-    <label>
-      Message
-      <textarea name="message" rows="6" required></textarea>
-    </label>
-
-    <!-- Anti-spam honeypot (do not remove) -->
-    <input type="text" name="_gotcha" style="display:none">
-
-    <button type="submit">Send</button>
-  </form>
-</section>
----FROM CHATGPT
+---CONTACT PAGE
+  
   <section id="contact" class="contact">
   <h2>Contact</h2>
   <p class="contact__intro">Send a message and I’ll get back to you.</p>
@@ -280,14 +255,13 @@
     method="POST"
   >
     <div class="field">
-      <label for="name">Name</label>
+      <label for="name">First and Last name</label>
       <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
     </div>
 
     <div class="field">
       <label for="email">Email</label>
       <input id="email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required>
-      <p class="hint">I’ll reply to this address.</p>
     </div>
 
     <div class="field">
@@ -303,7 +277,6 @@
 
     <button class="btn" type="submit">
       <span>Send message</span>
-      <span class="btn__sub">Typically within 1–2 days</span>
     </button>
   </form>
 </section>
