@@ -134,7 +134,7 @@
       </a>
    </p>
 
---
+--FROM FREEFORM
   <section id="contact">
   <h2>Contact</h2>
 
@@ -160,7 +160,45 @@
     <button type="submit">Send</button>
   </form>
 </section>
----
+---FROM CHATGPT
+  <section id="contact" class="contact">
+  <h2>Contact</h2>
+  <p class="contact__intro">Send a message and I’ll get back to you.</p>
+
+  <form
+    class="contact__form"
+    action="https://formspree.io/f/xjgybzjr"
+    method="POST"
+  >
+    <div class="field">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+    </div>
+
+    <div class="field">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required>
+      <p class="hint">I’ll reply to this address.</p>
+    </div>
+
+    <div class="field">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" placeholder="What would you like to discuss?" required></textarea>
+    </div>
+
+    <!-- Anti-spam honeypot -->
+    <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+    <!-- Optional redirect after submit (create /thanks.html) -->
+    <input type="hidden" name="_redirect" value="https://patriciasilva.eu/thanks.html">
+
+    <button class="btn" type="submit">
+      <span>Send message</span>
+      <span class="btn__sub">Typically within 1–2 days</span>
+    </button>
+  </form>
+</section>
+
 
   <footer>
     © Patrícia Silva
