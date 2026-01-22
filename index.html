@@ -60,7 +60,7 @@
       color: #666;
     }
 
---
+-----
       .hero-block {
     max-width: 1100px;
     margin: 0 auto;
@@ -82,8 +82,117 @@
     color: #3fa9e2;
     letter-spacing: 0.2px;
   }
+   
     -----
-    
+    /* Contact form — minimal polish */
+.contact {
+  max-width: 640px;
+  margin: 48px auto;
+}
+
+.contact__intro {
+  margin-top: 8px;
+  margin-bottom: 24px;
+  opacity: 0.85;
+}
+
+.contact__form {
+  display: grid;
+  gap: 16px;
+}
+
+.field label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 12px 12px;
+  border: 1px solid rgba(0,0,0,0.16);
+  border-radius: 12px;
+  font: inherit;
+  background: #fff;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  opacity: 0.6;
+}
+
+.hint {
+  margin: 8px 0 0;
+  font-size: 0.92rem;
+  opacity: 0.75;
+}
+
+/* Better keyboard focus */
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: rgba(0,0,0,0.35);
+  box-shadow: 0 0 0 4px rgba(0,0,0,0.06);
+}
+
+/* Accessible hover feedback */
+.field input:hover,
+.field textarea:hover {
+  border-color: rgba(0,0,0,0.25);
+}
+
+/* Button */
+.btn {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+
+  padding: 12px 16px;
+  border: 1px solid rgba(0,0,0,0.18);
+  border-radius: 14px;
+
+  background: #111;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.btn__sub {
+  font-size: 0.85rem;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+.btn:hover {
+  filter: brightness(1.05);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(0,0,0,0.10);
+}
+
+/* Honeypot hidden safely */
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
   </style>
 </head>
 
