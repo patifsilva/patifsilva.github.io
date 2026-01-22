@@ -163,6 +163,10 @@
   font-weight: 700;
   cursor: pointer;
   width: fit-content;
+
+  /* 👇 add these for the premium feel */
+  box-shadow: 0 6px 18px rgba(10, 143, 204, 0.25);
+  transition: box-shadow 0.2s ease, transform 0.1s ease, filter 0.2s ease;
 }
 
 .btn__sub {
@@ -177,6 +181,7 @@
 
 .btn:active {
   transform: translateY(1px);
+  box-shadow: 0 4px 12px rgba(10, 143, 204, 0.2);
 }
 
 .btn:focus {
