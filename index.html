@@ -246,9 +246,42 @@
       grid-template-columns: 1fr;
     }
   }
+    
+   /* - CSS - Auto-highlight current page in navbar - */ 
+
+    .nav__link{
+  text-decoration: none !important;
+  border-bottom: 2px solid transparent;
+  padding: 10px 2px;
+}
+
+.nav__link[aria-current="page"]{
+  border-bottom-color: #0B3A57;
+
+  /* -- */ 
+  
+}
+
 </style>
 </head>
 
+<script>
+   /* - Auto-highlight current page in navbar - */ 
+  const here = location.pathname.split("/").pop() || "index.html";
+
+  document.querySelectorAll(".nav__link").forEach(link => {
+    const target = (link.getAttribute("href") || "").split("/").pop();
+    if (target === here) {
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.removeAttribute("aria-current");
+    }
+  });
+    /* -- */ 
+
+</script>
+
+  
 <body>
   <!-- TOP NAV BAR -->
 <header class="topbar">
