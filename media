@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo-icon-32.png">
+  <meta charset="UTF-8" />
+  <title>Media – Patrícia Silva</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    :root{
+      --dark-blue: #0B3A57;
+      --border: rgba(0,0,0,.10);
+      --text: rgba(0,0,0,.85);
+      --topbar-h: 52px;
+    }
+
+    body{
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+      color: var(--text);
+      background: #fff;
+    }
+
+  footer {
+    margin-top: 4rem;
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+    /* =========================
+       TOP NAV BAR
+    ========================= */
+    .topbar{
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .topbar__inner{
+      height: var(--topbar-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand{
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      flex: 0 0 auto;
+    }
+
+    .brand__logo{
+      height: 26px;
+      width: auto;
+      display: block;
+    }
+
+    .nav{
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      justify-content: flex-end;
+      flex: 1 1 auto;
+      white-space: nowrap;
+    }
+
+    .nav__link{
+      text-decoration: none;
+      font-family: inherit;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: .12em;
+      color: var(--dark-blue);
+      padding: 10px 2px;
+      border-bottom: 2px solid transparent;
+    }
+
+    .nav__link:hover{
+      opacity: 0.85;
+    }
+
+    .nav__link[aria-current="page"]{
+      border-bottom-color: var(--dark-blue);
+    }
+
+    /* =========================
+       MEDIA PAGE
+    ========================= */
+    main{
+      padding-top: 44px;
+    }
+
+    h1{
+      font-size: 34px;
+      font-weight: 600;
+      margin: 0 0 12px;
+      color: rgba(0,0,0,.90);
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle{
+      margin: 0 0 30px;
+      font-size: 16px;
+      line-height: 1.5;
+      color: rgba(0,0,0,.65);
+      max-width: 760px;
+    }
+
+    .contentBox{
+      border: none;
+      border-radius: 16px;
+      padding: 22px;
+      max-width: 760px;
+      background: #fff;
+    }
+
+    .contentBox h2{
+      margin: 0 0 10px;
+      font-size: 18px;
+      font-weight: 600;
+      color: rgba(0,0,0,.88);
+    }
+
+    .contentBox p{
+      margin: 0 0 12px;
+      color: rgba(0,0,0,.78);
+      line-height: 1.6;
+    }
+
+    .contentBox ul{
+      margin: 10px 0 0 18px;
+      padding: 0;
+      color: rgba(0,0,0,.78);
+    }
+
+    .contentBox li{
+      margin: 8px 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 650px){
+      h1{ font-size: 28px; }
+      .nav{ gap: 18px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP NAV -->
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <img class="brand__logo" src="/assets/logo-icon-32.png" alt="Logo" />
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="nav__link" href="index.html">Home</a>
+        <a class="nav__link" href="about.html">About</a>
+        <a class="nav__link" href="media.html">Media</a>
+        <a class="nav__link" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE CONTENT -->
+  <main>
+    <h1>Media</h1>
+    <p class="subtitle">
+      Short media overview.
+    </p>
+
+    <div class="contentBox">
+      <h2>Focus</h2>
+      <p>
+        Placeholder text for meaid engagements. Keep this to 2–4 sentences.
+      </p>
+
+      <h2>Experience</h2>
+      <ul>
+        <li>present past media engagements</li>
+        <li>present past media engagements</li>
+
+        
+  <footer>
+    © Patrícia Silva
+  </footer>
+        
+</body>
+</html>
