@@ -115,7 +115,12 @@
   }   
 
     .lead{
-   font-size: 18px;
+   display: grid;
+  grid-template-columns: 2fr 1fr; /* 2/3 text, 1/3 image */
+  gap: 24px;
+  align-items: center;
+
+  font-size: 18px;
   line-height: 1.75;
   max-width: 900px;
   margin: 28px auto 42px;
@@ -123,6 +128,28 @@
   border-left: 4px solid #0B3A57;
   background: rgba(11, 58, 87, 0.04);
   border-radius: 12px;
+}
+.lead__text{
+  color: rgba(0,0,0,.78);
+}
+
+.lead__photo{
+  width: 100%;
+  max-width: 220px;
+  justify-self: end;
+  border-radius: 999px; /* circular */
+  display: block;
+}
+
+/* mobile: stack */
+@media (max-width: 760px){
+  .lead{
+    grid-template-columns: 1fr;
+  }
+  .lead__photo{
+    justify-self: start;
+    max-width: 160px;
+  }
 }
 
 .contact{
@@ -194,10 +221,18 @@
   <img src="/assets/hero-pic.jpg" alt="Hero image" class="hero-image" />
 
 </section>
-  <p class="lead">
+  <div class="lead">
+  <div class="lead__text">
     I work at the intersection of climate strategy, carbon removal markets, and real-world project development.
     My perspective is shaped by over eight years of experience as an operator, advisor, and investor, supporting decision-makers navigating high-integrity climate action.
-  </p>
+  </div>
+
+  <img
+    class="lead__photo"
+    src="/assets/profile-pic.png"
+    alt="Patrícia Silva"
+  />
+</div>
 
   <h2>How I can help you</h2>
   <ul>
