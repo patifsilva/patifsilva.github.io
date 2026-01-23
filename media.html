@@ -7,88 +7,96 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
-    :root{
-      --dark-blue: #0B3A57;
-      --border: rgba(0,0,0,.10);
-      --text: rgba(0,0,0,.85);
-      --topbar-h: 52px;
+   :root{
+  --dark-blue: #0B3A57;
+    --border: rgba(0,0,0,.10);
+    --text: rgba(0,0,0,.85);
+    --topbar-h: 52px;      
+}
+
+
+   body{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0.5cm 20px 60px;
+    color: var(--text);
+    background: #fff;
     }
 
-    body{
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 0 20px 60px;
-      color: var(--text);
-      background: #fff;
-    }
-
+    
   footer {
     margin-top: 4rem;
     font-size: 0.9rem;
     color: #666;
   }
+  
+   
+  /* =========================
+     TOP NAV BAR
+  ========================= */
+  .topbar{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+  }
 
-    /* =========================
-       TOP NAV BAR
-    ========================= */
-    .topbar{
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: #fff;
-      border-bottom: 1px solid var(--border);
-    }
+  .topbar__inner{
+    height: var(--topbar-h);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+  }
 
-    .topbar__inner{
-      height: var(--topbar-h);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-    }
+  .brand{
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    flex: 0 0 auto;
+  }
 
-    .brand{
-      display: inline-flex;
-      align-items: center;
-      text-decoration: none;
-      flex: 0 0 auto;
-    }
+  .brand__logo{
+    height: 40px;
+    width: auto;
+    display: block;
+  }
 
-    .brand__logo{
-      height: 26px;
-      width: auto;
-      display: block;
-    }
+  .nav{
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    justify-content: flex-end;
+    flex: 1 1 auto;
+    white-space: nowrap;
+  }
 
-    .nav{
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      justify-content: flex-end;
-      flex: 1 1 auto;
-      white-space: nowrap;
-    }
+  .nav__link{
+    text-decoration: none;
+    font-family: inherit;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: .12em;
+    color: var(--dark-blue);
+    padding: 10px 2px;
+    border-bottom: 2px solid transparent;
+  }
 
-    .nav__link{
-      text-decoration: none;
-      font-family: inherit;
-      font-weight: 400;
-      text-transform: uppercase;
-      font-size: 12px;
-      letter-spacing: .12em;
-      color: var(--dark-blue);
-      padding: 10px 2px;
-      border-bottom: 2px solid transparent;
-    }
+  .nav__link:hover{
+    opacity: 0.85;
+  }
 
-    .nav__link:hover{
-      opacity: 0.85;
-    }
+  .nav__link[aria-current="page"]{
+    border-bottom-color: var(--dark-blue);
+  }
 
-    .nav__link[aria-current="page"]{
-      border-bottom-color: var(--dark-blue);
-    }
+  /* Responsive */
+  @media (max-width: 650px){
+    .nav{ gap: 18px; }
+  }
 
     /* =========================
        MEDIA PAGE
@@ -156,31 +164,34 @@
 
   <!-- TOP NAV -->
   <header class="topbar">
-    <div class="topbar__inner">
-      <a class="brand" href="index.html" aria-label="Home">
-        <img class="brand__logo" src="/assets/logo-icon-32.png" alt="Logo" />
-      </a>
+  <div class="topbar__inner">
+    <a class="brand" href="index.html" aria-label="Home">
+      <img class="brand__logo" src="/assets/logo-icon-32.png" alt="Logo" />
+    </a>
 
-      <nav class="nav" aria-label="Primary navigation">
-        <a class="nav__link" href="index.html">Home</a>
-        <a class="nav__link" href="about.html">About</a>
-        <a class="nav__link" href="media.html">Media</a>
-        <a class="nav__link" href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="about.html">About</a>
+      <a class="nav__link" href="media.html">Media</a>
+      <a class="nav__link" href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
 
   <!-- PAGE CONTENT -->
   <main>
     <h1>Media</h1>
     <p class="subtitle">
-      Short media overview.
+      Placeholder text for media engagements. Keep this to 2–4 sentences.
+
+
     </p>
 
     <div class="contentBox">
       <h2>Focus</h2>
       <p>
-        Placeholder text for meaid engagements. Keep this to 2–4 sentences.
+        Placeholder text for what I do and who I work with. Keep this to 2–4 sentences.
       </p>
 
       <h2>Experience</h2>
