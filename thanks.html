@@ -3,10 +3,92 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Thank you</title>
+  <title>Thank you - Patrícia Silva</title>
   <link rel="stylesheet" href="/style.css" />
 </head>
+
+
+<style>
+
+  
+    /* ======TOP NAV BAR ====== */
+    .topbar{
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .topbar__inner{
+      height: var(--topbar-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand{
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      flex: 0 0 auto;
+    }
+
+    .brand__logo{
+      height: 26px;
+      width: auto;
+      display: block;
+    }
+
+    .nav{
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      justify-content: flex-end;
+      flex: 1 1 auto;
+      white-space: nowrap;
+    }
+
+    .nav__link{
+      text-decoration: none;
+      font-family: inherit;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: .12em;
+      color: var(--dark-blue);
+      padding: 10px 2px;
+      border-bottom: 2px solid transparent;
+    }
+
+    .nav__link:hover{
+      opacity: 0.85;
+    }
+
+    .nav__link[aria-current="page"]{
+      border-bottom-color: var(--dark-blue);
+    }
+  
+</style>
+  
 <body>
+  <!-- TOP NAV -->
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <img class="brand__logo" src="/assets/logo-icon-32.png" alt="Logo" />
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="nav__link" href="index.html">Home</a>
+        <a class="nav__link" href="about.html">About</a>
+        <a class="nav__link" href="media.html">Media</a>
+        <a class="nav__link" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  
   <main class="contact">
     <h1>Thanks for your message!</h1>
     <p>I’ll reply to the email you provided.</p>
