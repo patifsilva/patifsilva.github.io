@@ -14,62 +14,6 @@
     --topbar-h: 52px;      
 }
 
-.topbar{
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: #fff;
-  border-bottom: 1px solid var(--border);
-}
-
-.topbar__inner{
-  height: var(--topbar-h);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-}
-
-.brand{
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-  flex: 0 0 auto;
-}
-
-.brand__logo{
-  height: var(--logo-h);
-  width: auto;
-  display: block;
-}
-
-.nav{
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  justify-content: flex-end;
-  flex: 1 1 auto;
-  white-space: nowrap;
-}
-
-.nav__link{
-  text-decoration: none;
-  font-family: inherit;
-  font-weight: 400;
-  text-transform: uppercase;
-  font-size: 12px;
-  letter-spacing: .12em;
-  color: var(--dark-blue);
-  padding: 10px 2px;
-  border-bottom: 2px solid transparent;
-}
-
-.nav__link:hover{ opacity: 0.85; }
-
-.nav__link[aria-current="page"]{
-  border-bottom-color: var(--dark-blue);
-}
-
 
    body{
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -86,9 +30,7 @@
     font-size: 0.9rem;
     color: #666;
   }
-    /* =========================
-       TOP NAV BAR
-    ========================= */
+  
    
   /* =========================
      TOP NAV BAR
