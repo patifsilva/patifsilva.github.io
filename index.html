@@ -44,6 +44,26 @@
     text-decoration: underline;
   }
 
+
+   .topbar__inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* pushes nav to the right */
+  gap: 18px;
+}
+
+.brand{
+  flex: 0 0 auto;   /* logo stays its size */
+}
+
+.nav{
+  display: flex;
+  gap: 28px;
+  justify-content: flex-end;
+  flex: 1 1 auto;   /* nav takes remaining space */
+  white-space: nowrap; /* prevents wrapping under logo */
+}
+    
   .tagline {
     font-size: 1.1rem;
     font-weight: 500;
