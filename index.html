@@ -156,6 +156,34 @@
   text-align: center;
 }
 
+    .services{
+  display: grid;
+  gap: 18px;
+  margin-top: 18px;
+  max-width: 980px;
+}
+
+.service{
+  border: 1px solid rgba(0,0,0,.10);
+  border-radius: 16px;
+  padding: 18px 20px;
+  background: #fff;
+}
+
+.service h3{
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 700;
+  color: rgba(0,0,0,.88);
+}
+
+.service p{
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(0,0,0,.68);
+}
+
     
    /* - CSS - Auto-highlight current page in navbar - */ 
     .nav__link{
@@ -235,11 +263,23 @@
 </div>
 
   <h2>How I can help you</h2>
-  <ul>
-    <li><strong>Corporate Advisory</strong> — Carbon removal strategy, procurement, climate claims, and long-term net-zero positioning</li>
-    <li><strong>Speaking & Conferences</strong> — Keynotes, panels, and executive briefings on carbon removal and climate integrity</li>
-    <li><strong>Investor & Project Support</strong> — Market insights, diligence, and strategic support for funds and developers</li>
-  </ul>
+
+<div class="services">
+  <div class="service">
+    <h3>Corporate Advisory</h3>
+    <p>Carbon removal strategy, procurement, climate claims, and long-term net-zero positioning.</p>
+  </div>
+
+  <div class="service">
+    <h3>Speaking & Conferences</h3>
+    <p>Keynotes, panels, and executive briefings on carbon removal and climate integrity.</p>
+  </div>
+
+  <div class="service">
+    <h3>Investor & Project Support</h3>
+    <p>Market insights, diligence, and strategic support for funds and developers.</p>
+  </div>
+</div>
 
   <h2>Experience</h2>
   <ul>
