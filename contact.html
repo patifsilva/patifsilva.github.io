@@ -1,1 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" sizes="32x32" href="/Favicon-32.png">
+  <meta charset="UTF-8" />
+  <title>Contact – Patrícia Silva</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    :root{
+      --dark-blue: #0B3A57;
+      --border: rgba(0,0,0,.10);
+      --text: rgba(0,0,0,.85);
+      --topbar-h: 52px;
+    }
+
+    body{
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+      color: var(--text);
+      background: #fff;
+    }
+
+    /* =========================
+       TOP NAV BAR
+    ========================= */
+    .topbar{
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .topbar__inner{
+      height: var(--topbar-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand{
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      flex: 0 0 auto;
+    }
+
+    .brand__logo{
+      height: 26px;
+      width: auto;
+      display: block;
+    }
+
+    .nav{
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      justify-content: flex-end;
+      flex: 1 1 auto;
+      white-space: nowrap;
+    }
+
+    .nav__link{
+      text-decoration: none;
+      font-family: inherit;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: .12em;
+      color: var(--dark-blue);
+      padding: 10px 2px;
+      border-bottom: 2px solid transparent;
+    }
+
+    .nav__link:hover{
+      opacity: 0.85;
+    }
+
+    .nav__link[aria-current="page"]{
+      border-bottom-color: var(--dark-blue);
+    }
+
+    /* =========================
+       CONTACT PAGE
+    ========================= */
+    main{
+      padding-top: 44px;
+    }
+
+    h1{
+      font-size: 34px;
+      font-weight: 600;
+      margin: 0 0 12px;
+      color: rgba(0,0,0,.90);
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle{
+      margin: 0 0 30px;
+      font-size: 16px;
+      line-height: 1.5;
+      color: rgba(0,0,0,.65);
+      max-width: 700px;
+    }
+
+    .contactBox{
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+      max-width: 760px;
+      background: #fff;
+    }
+
+    .helper{
+      font-size: 13px;
+      margin-top: 10px;
+      color: rgba(0,0,0,.55);
+    }
+
+    /* Responsive */
+    @media (max-width: 650px){
+      h1{ font-size: 28px; }
+      .nav{ gap: 18px; }
+    }
+
+
+    /* CONTACT FORM */
+  .contact {
+    max-width: 640px;
+    margin: 48px auto;
+  }
+
+  .contact__intro {
+    margin-top: 8px;
+    margin-bottom: 24px;
+    opacity: 0.85;
+  }
+
+  .contact__form {
+    display: grid;
+    gap: 16px;
+  }
+
+  /* Rounded rectangle background panel (brand blue) */
+  .form-panel {
+    background: #0B3C5D; /* dark blue from logo */
+    border-radius: 28px;
+    padding: 32px 32px 36px;
+    display: grid;
+    gap: 20px;
+  }
+
+  /* Row of 3 fields on desktop */
+  .form-row {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 1cm; 
+}
+
+  /* Labels (inside panel) */
+  .form-panel .field label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #ffffff;
+  }
+
+  /* Inputs (inside panel) */
+  .form-panel .field input,
+  .form-panel .field textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: none;
+    border-radius: 12px;
+    font: inherit;
+    background: #fff;
+  }
+
+  .form-panel .field textarea {
+    resize: vertical;
+    min-height: 140px;
+  }
+
+  .form-panel .field input::placeholder,
+  .form-panel .field textarea::placeholder {
+    opacity: 0.6;
+  }
+
+  /* Focus states */
+  .form-panel .field input:focus,
+  .form-panel .field textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.25);
+  }
+
+  /* Hover feedback */
+  .form-panel .field input:hover,
+  .form-panel .field textarea:hover {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.12);
+  }
+
+  /* Button (inside panel) */
+  .btn {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+
+    padding: 12px 16px;
+    border-radius: 14px;
+
+    background: #0A8FCC; /* light blue from logo */
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    width: fit-content;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    /* premium feel */
+    box-shadow: 0 6px 18px rgba(10, 143, 204, 0.25);
+    transition: box-shadow 0.2s ease, transform 0.1s ease, filter 0.2s ease;
+  }
+
+  .btn:hover {
+    filter: brightness(1.05);
+  }
+
+  .btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 12px rgba(10, 143, 204, 0.2);
+  }
+
+  .btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.25), 0 6px 18px rgba(10, 143, 204, 0.25);
+  }
+
+  /* Honeypot hidden safely */
+  .hp {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  /* Mobile adaptation */
+  @media (max-width: 768px) {
+    .form-panel {
+      padding: 22px 18px 24px;
+      border-radius: 22px;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+  }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP NAV -->
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <img class="brand__logo" src="/Favicon-32.png" alt="Logo" />
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="nav__link" href="index.html">Home</a>
+        <a class="nav__link" href="about.html">About</a>
+        <a class="nav__link" href="media.html">Media</a>
+        <a class="nav__link" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE CONTENT -->
+  <main>
+    <h1>Contact</h1>
+    <p class="subtitle">
+      For advisory work, speaking, collaborations, or general inquiries — feel free to reach out using the form below.
+    </p>
+
+    <div class="contactBox">
+
+      <!-- =============================
+        <!-- CONTACT FORM (Formspree) -->
+<form
+  class="contact__form"
+  action="https://formspree.io/f/xjgybzjr"
+  method="POST"
+>
+  <!-- Rounded background panel  -->
+<div class="form-panel">
+
+  <!-- Row 1: First + Last name (side by side) -->
+  <div class="form-row">
+    <div class="field">
+      <label for="first_name">First name</label>
+      <input
+        id="first_name"
+        name="first_name"
+        type="text"
+        autocomplete="given-name"
+        placeholder="First name"
+        required
+      >
+    </div>
+
+    <div class="field">
+      <label for="last_name">Last name</label>
+      <input
+        id="last_name"
+        name="last_name"
+        type="text"
+        autocomplete="family-name"
+        placeholder="Last name"
+        required
+      >
+    </div>
+  </div>
+
+  <!-- Row 2: Email (full width) -->
+  <div class="field">
+    <label for="email">Email</label>
+    <input
+      id="email"
+      name="email"
+      type="email"
+      autocomplete="email"
+      placeholder="you@company.com"
+      required
+    >
+  </div>
+
+  <!-- Row 3: Message -->
+  <div class="field">
+    <label for="message">Message</label>
+    <textarea
+      id="message"
+      name="message"
+      rows="6"
+      placeholder="What would you like to discuss?"
+      required
+    ></textarea>
+  </div>
+
+  <!-- Anti-spam honeypot -->
+  <input
+    type="text"
+    name="_gotcha"
+    class="hp"
+    tabindex="-1"
+    autocomplete="off"
+    aria-hidden="true"
+  >
+
+  <!-- Redirect -->
+  <input type="hidden" name="_redirect" value="https://patriciasilva.eu/thanks.html">
+
+  <button class="btn" type="submit">
+    <span>Send message</span>
+  </button>
+
+</div>
+
+</form>
+      ============================== -->
+
+      <!-- Example placeholder -->
+      <p style="margin:0; color: rgba(0,0,0,.55); font-size:14px;">
+        Paste your contact form code here.
+      </p>
+
+    </div>
+
+    <p class="helper">
+      Alternatively, you can email me directly at <strong>hello@yourdomain.com</strong>.
+    </p>
+  </main>
+
+  <script>
+    // Auto-highlight current page in navbar
+    const here = location.pathname.split("/").pop() || "index.html";
+    document.querySelectorAll(".nav__link").forEach(a => {
+      const target = (a.getAttribute("href") || "").split("/").pop();
+      if (target === here) a.setAttribute("aria-current", "page");
+    });
+  </script>
+
+</body>
+</html>
 
