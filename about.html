@@ -235,9 +235,9 @@ n
 
 .about-hero{
   display: grid;
-  grid-template-columns: 320px 1fr;
+  grid-template-columns: 340px 1fr;
   gap: 34px;
-  align-items: start;
+  align-items: start; /* ensures the image sits aligned with paragraph 1 */
   margin-top: 22px;
 }
 
@@ -246,13 +246,17 @@ n
   overflow: hidden;
   border: 1px solid var(--border);
   background: #fff;
+  position: relative;
 }
 
 .about-photo img{
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
+  object-fit: cover;
+  aspect-ratio: 3 / 4; /* portrait feel; keeps it aligned w/ first paragraph */
 }
+
 
 .about-hero h1{
   margin: 0 0 14px;
