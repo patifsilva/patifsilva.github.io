@@ -172,19 +172,20 @@
 }
 
 .eng-photo-wrap{
-  border-radius: 18px;     /* ✅ curve on the image */
-  overflow: hidden;        /* ✅ forces clipping */
+  border-radius: 28px;   /* rounded corners */
+  overflow: hidden;      /* clips image to the curve */
 }
 
 .eng-photo{
   width: 100%;
   height: clamp(240px, 30vw, 360px);
-  object-fit: contain;     /* no cropping */
-  display: block;          /* removes inline gap */
+  object-fit: cover;      /* ✅ fills the wrapper so rounding shows */
+  object-position: center;
+  display: block;
   border: none;
   box-shadow: none;
-  background: transparent;
 }
+
 
 @media (min-width: 860px){
   .eng-photo-pair{
