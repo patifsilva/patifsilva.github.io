@@ -173,7 +173,9 @@
 
 .eng-photo{
   width: 100%;
-  height: auto;
+  height: clamp(240px, 30vw, 360px);
+  object-fit: cover;
+  object-position: center;
   border-radius: 16px;
   border: 1px solid rgba(0,0,0,.10);
   box-shadow: 0 10px 22px rgba(0,0,0,.06);
