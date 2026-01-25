@@ -122,42 +122,94 @@
       max-width: 760px;
     }
 
-    .contentBox{
-      border: none;
-      border-radius: 16px;
-      padding: 22px;
-      max-width: 760px;
-      background: #fff;
-    }
-
-    .contentBox h2{
-      margin: 0 0 10px;
-      font-size: 18px;
-      font-weight: 600;
-      color: rgba(0,0,0,.88);
-    }
-
-    .contentBox p{
-      margin: 0 0 12px;
-      color: rgba(0,0,0,.78);
-      line-height: 1.6;
-    }
-
-    .contentBox ul{
-      margin: 10px 0 0 18px;
-      padding: 0;
-      color: rgba(0,0,0,.78);
-    }
-
-    .contentBox li{
-      margin: 8px 0;
-    }
-
     /* Responsive */
     @engagements (max-width: 650px){
       h1{ font-size: 28px; }
       .nav{ gap: 18px; }
     }
+
+    /* =========================
+   ENGAGEMENTS (one card per section)
+========================= */
+
+.section-subtitle{
+  margin-top: -6px;
+  margin-bottom: 18px;
+  color: rgba(0,0,0,.65);
+  line-height: 1.5;
+  font-size: 0.98rem;
+}
+
+.eng-sections{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.eng-section-card{
+  border: 1px solid rgba(0,0,0,.10);
+  border-radius: 18px;
+  padding: 14px 16px 10px;
+  background: #fff;
+  box-shadow: 0 8px 18px rgba(0,0,0,.05);
+}
+
+.eng-section-card h3{
+  margin: 0 0 10px 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.eng-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.eng-list li{
+  padding: 10px 0;
+  border-top: 1px solid rgba(0,0,0,.08);
+}
+
+.eng-list li:first-child{
+  border-top: 0;
+  padding-top: 0;
+}
+
+.eng-line{
+  font-weight: 650;
+  font-size: 0.96rem;
+  line-height: 1.35;
+}
+
+.eng-sub{
+  margin-top: 4px;
+  font-size: 0.92rem;
+  color: rgba(0,0,0,.70);
+  line-height: 1.45;
+}
+
+.eng-date{
+  font-weight: 600;
+  color: rgba(0,0,0,.55);
+}
+
+.eng-section-card a{
+  color: var(--dark-blue);
+  text-decoration: none;
+  font-weight: 750;
+}
+
+.eng-section-card a:hover{
+  text-decoration: underline;
+}
+
+@media (min-width: 860px){
+  .eng-sections{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
   </style>
 </head>
 
@@ -182,24 +234,77 @@
 
   <!-- PAGE CONTENT -->
   <main>
-    <h1>Engagements</h1>
-    <p class="subtitle">
-      Placeholder text for  engagements. Keep this to 2–4 sentences.
+   <section id="engagements" class="section">
+  <h2>Engagements</h2>
+  <p class="section-subtitle">Speaking, media, publications, and professional contributions across carbon removal, climate strategy, and climate tech.</p>
 
+  <div class="eng-sections">
 
-    </p>
+    <div class="eng-section-card">
+      <h3>Speaking & Panels</h3>
+      <ul class="eng-list">
+        <li><div class='eng-line'>Women in Carbon - Breakfast — <a href="https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7315432953172365312/?midToken=AQETPj2PpKMeDA&midSig=0hQMkld67szHI1&trk=eml-email_notification_single_mentioned_you_in_this_01-hero_notification_cta-0-1ep~cta&trkEmail=eml-email_notification_single_mentioned_you_in_this_01-hero_notification_cta-0-1ep~cta-null-pvw6u~m98wnouj~da-null-null&eid=pvw6u-m98wnouj-da" target="_blank" rel="noopener">IETA and Women in Carbon</a> <span class="eng-date">(Apr 2025)</span></div><div class='eng-sub'>Individual/Patch · My climate path</div></li>
+        <li><div class='eng-line'>Carbon Markets Fireside Chat — Founders Factory <span class="eng-date">(Nov 2024)</span></div><div class='eng-sub'>Independent - Speaker · Carbon Removal - Carbon Markets</div></li>
+        <li><div class='eng-line'>Expert call — AlphaSights (for BigCircle Ventures) <span class="eng-date">(Aug 2024)</span></div><div class='eng-sub'>Independent · CDR</div></li>
+        <li><div class='eng-line'>Energy Conference - RE — TagEnergy <span class="eng-date">(Jul 2023)</span></div><div class='eng-sub'>Independent · Global renewable energy acceleration</div></li>
+        <li><div class='eng-line'>Mystery of the Mantas — <a href="https://www.redbridgelisbon.com/events/mystery-of-the-mantas" target="_blank" rel="noopener">RedBridge</a> <span class="eng-date">(Apr 2023)</span></div><div class='eng-sub'>Me · Ocean CDR</div></li>
+        <li><div class='eng-line'>MC planet tech stage — Web Summit <span class="eng-date">(Nov 2022)</span></div><div class='eng-sub'>independent - Presenter</div></li>
+        <li><div class='eng-line'>Metaverse and Climate — <a href="https://www.accenture.com/us-en/about/events/metaverse-continuum-conference" target="_blank" rel="noopener">Accenture</a> <span class="eng-date">(Nov 2022)</span></div><div class='eng-sub'>independent</div></li>
+        <li><div class='eng-line'>Cleantech Panel — Plaanetiers World Gathering <span class="eng-date">(Oct 2022)</span></div><div class='eng-sub'>independent</div></li>
+        <li><div class='eng-line'>Inovar3 — <a href="https://josedemelloservicos.sharepoint.com/sites/microsite" target="_blank" rel="noopener">Jose de Mello</a> <span class="eng-date">(May 2022)</span></div><div class='eng-sub'>Independent</div></li>
+        <li><div class='eng-line'>M4G-Manufacturing for good — <a href="https://www.cisl.cam.ac.uk/work-with-us/accelerator-and-sustainability-hub/manufacturing-for-good" target="_blank" rel="noopener">Manufacturing for Good - Cambridge Institute for Sustainability Leadership</a> <span class="eng-date">(Nov 2021)</span></div><div class='eng-sub'>GAS? · accelerator programme with 20 start-ups in sustainability innovation https://www.linkedin.com/feed/update/urn:li:activity:6866306369218240513/</div></li>
+        <li><div class='eng-line'>Web Summit Interview Sustainability Summit — <a href="https://www.linkedin.com/feed/update/urn:li:activity:6862790276755296256/" target="_blank" rel="noopener">Accenture (Web Summit)</a> <span class="eng-date">(Nov 2021)</span></div><div class='eng-sub'>44.01 · 44.01. interview available privately in Accenture's files</div></li>
+        <li><div class='eng-line'>Rocking the Earth's Potential — Web Summit <span class="eng-date">(Nov 2021)</span></div><div class='eng-sub'>44.01</div></li>
+        <li><div class='eng-line'>Finance your sustainable startup, finance your startup sustainably — <a href="https://wegate-summit-2021.b2match.io/page-4331" target="_blank" rel="noopener">WEgate Summit</a> <span class="eng-date">(Oct 2021)</span></div><div class='eng-sub'>GAS · finance sustainability women entrepreneurs workshop trianing</div></li>
+        <li><div class='eng-line'>Engagement — <a href="https://techinvest.london/techinvest-diverse-founders/" target="_blank" rel="noopener">Tech Invest</a> <span class="eng-date">(Jul 2021)</span></div><div class='eng-sub'>Judge of Tech based companies · Diverse Founders https://www.ukbaa.org.uk/events/techinvest-diversity-in-tech/</div></li>
+        <li><div class='eng-line'>From funnel to funding – diversifying your approach from end-to-end — <a href="https://futureforwardseries.ukbaa.org.uk/investing-in-diversity/from-funnel-to-funding/" target="_blank" rel="noopener">UKBAA</a> <span class="eng-date">(Jul 2021)</span></div><div class='eng-sub'>GAS · Our panel will look at everything from how to expand your network to improve the diversity of deal flow, to how to ensure a fair, accessible investment process for founders.</div></li>
+        <li><div class='eng-line'>CC course session — <a href="https://us02web.zoom.us/rec/share/x6YVYZ_W6UMZVG1gfG0VynVNfqoErXTkTTmN5wMTABf1ZePzLlA0sg6DmxL8_Y5V.NKJRewPljcD6FlI8" target="_blank" rel="noopener">AIS</a> <span class="eng-date">(May 2021)</span></div><div class='eng-sub'>GAS · Passcode: xT?8h+Vz</div></li>
+        <li><div class='eng-line'>Engagement — <a href="https://ukbaa.org.uk/investing-in-women-code-signatory-green-angel-syndicate-highlight-the-work-theyve-done-so-far-and-their-plans-moving-forward/" target="_blank" rel="noopener">UKBAA</a> <span class="eng-date">(May 2021)</span></div><div class='eng-sub'>GAS · D&I - gender</div></li>
+        <li><div class='eng-line'>Airminers Conference — Airminers <span class="eng-date">(May 2021)</span></div><div class='eng-sub'>CRC · Policy UK & Europe</div></li>
+        <li><div class='eng-line'>Massive.Earth Challenge — <a href="https://www.massive.earth/" target="_blank" rel="noopener">Massive Earth</a> <span class="eng-date">(Mar 2021)</span></div><div class='eng-sub'>CRC · technical CR solutions</div></li>
+        <li><div class='eng-line'>Andy Ayim — <a href="https://vimeo.com/502384115" target="_blank" rel="noopener">GAS</a> <span class="eng-date">(Jan 2021)</span></div><div class='eng-sub'>GAS · Ange Investment</div></li>
+        <li><div class='eng-line'>Engagement — GAS <span class="eng-date">(Nov 2020)</span></div><div class='eng-sub'>Presenter/moderator of pitch event</div></li>
+        <li><div class='eng-line'>B-corps — Planetiers <span class="eng-date">(Oct 2020)</span></div><div class='eng-sub'>Moderator</div></li>
+        <li><div class='eng-line'>Project Drawdown — Planetiers <span class="eng-date">(Oct 2020)</span></div><div class='eng-sub'>Moderator</div></li>
+        <li><div class='eng-line'>Carbon Removal 101 — <a href="https://www.greenangelsyndicate.com/" target="_blank" rel="noopener">Green Angel Syndicate</a> <span class="eng-date">(Oct 2020)</span></div><div class='eng-sub'>GAS Member/Individual · Carbon removal ecosystem, capture, investments</div></li>
+        <li><div class='eng-line'>Encontro com Ministro do Ambiente e Acao Climatica — <a href="https://twitter.com/PSilvaSust/status/1260917483914973185?s=20" target="_blank" rel="noopener">Ministerio do Ambiente</a> <span class="eng-date">(May 2020)</span></div><div class='eng-sub'>Lidera · Financiamento sustentavel pos covid</div></li>
+        <li><div class='eng-line'>Intro to the CRC — CRC <span class="eng-date">(Sep 2019)</span></div><div class='eng-sub'>CRC · CDR</div></li>
+        <li><div class='eng-line'>EGM Carbon Market (expert group meeting)</div></li>
+        <li><div class='eng-line'>Linkedin posts — Me</div><div class='eng-sub'>Independent · CDR site visits in the GS</div></li>
+        <li><div class='eng-line'>no companies to date — Carbon 13</div><div class='eng-sub'>Mentor</div></li>
+      </ul>
+    </div>
 
-    <div class="contentBox">
-      <h2>Focus</h2>
-      <p>
-        Placeholder text for what I do and who I work with. Keep this to 2–4 sentences.
-      </p>
+    <div class="eng-section-card">
+      <h3>Media & Interviews</h3>
+      <ul class="eng-list">
+        <li><div class='eng-line'>This Is CDR: Nakivale - Uganda's Refugee-Led Biochar Enterprise — <a href="https://www.youtube.com/watch?v=Ctdjlbd7lt4" target="_blank" rel="noopener">This is CDR</a> <span class="eng-date">(Feb 2025)</span></div><div class='eng-sub'>Individual · Cabon removal project and credit purhase.</div></li>
+        <li><div class='eng-line'>Interview Expresso/Accenture — Expresso <span class="eng-date">(Nov 2022)</span></div><div class='eng-sub'>Venture Partner - Satgana (Accenture) · climate investments</div></li>
+        <li><div class='eng-line'>Impact Unicorns - Carbon Removal — <a href="https://lnkd.in/dgw_eDdC" target="_blank" rel="noopener">Indranil Gosh</a> <span class="eng-date">(Feb 2022)</span></div><div class='eng-sub'>Independent · https://www.linkedin.com/feed/update/urn:li:activity:6899648692509405184/</div></li>
+        <li><div class='eng-line'>podcast — <a href="https://podcasts.apple.com/gb/podcast/7-how-do-we-scale-up/id1590522755?i=1000543582326" target="_blank" rel="noopener">The Carbon Removal Show</a> <span class="eng-date">(Jun 2021)</span></div><div class='eng-sub'>CRC</div></li>
+        <li><div class='eng-line'>The Importance of tackling Climate Change — <a href="https://cornerstonepartnersteams-my.sharepoint.com/personal/wilfred_cornerstonepartners_co_uk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fwilfred%5Fcornerstonepartners%5Fco%5Fuk%2FDocuments%2F1%2E0%20Cornerstone%20Partners%202020%2F5%2E0%20Marketing%2FWebinars%2FThe%20Importance%20of%20tackling%20climate%20change%2Emp4&parent=%2Fpersonal%2Fwilfred%5Fcornerstonepartners%5Fco%5Fuk%2FDocuments%2F1%2E0%20Cornerstone%20Partners%202020%2F5%2E0%20Marketing%2FWebinars&originalPath=aHR0cHM6Ly9jb3JuZXJzdG9uZXBhcnRuZXJzdGVhbXMtbXkuc2hhcmVwb2ludC5jb20vOnY6L2cvcGVyc29uYWwvd2lsZnJlZF9jb3JuZXJzdG9uZXBhcnRuZXJzX2NvX3VrL0VWcElsaUIwOXIxR25VTGxvalFuVGtFQnJtRk9CSTFHMEVNdFRQVXVTQncwS2c_cnRpbWU9dDFTRXNDS1IyRWc" target="_blank" rel="noopener">Cornerstone Partners</a> <span class="eng-date">(Nov 2020)</span></div><div class='eng-sub'>GAS · D&I</div></li>
+        <li><div class='eng-line'>What's happening in the UK? An update from Patricia Silva of the Carbon Removal Centre — <a href="https://nori.com/podcasts/carbon-removal-newsroom/Whats-happening-in-the-UK--An-update-from-Patricia-Silva-of-the-Carbon-Removal-Centre-el4thd" target="_blank" rel="noopener">Carbon Removal Newsroom - Nori</a> <span class="eng-date">(Oct 2020)</span></div><div class='eng-sub'>CRC · Carbon Removal and offsetting UK developments</div></li>
+        <li><div class='eng-line'>Planetiers Home Gathering (2) — <a href="https://www.youtube.com/watch?v=wjHkYKOLgLA" target="_blank" rel="noopener">Planetiers / TVI 24</a> <span class="eng-date">(Jul 2020)</span></div><div class='eng-sub'>Ambassador Planetiers · Transicao Energetica</div></li>
+        <li><div class='eng-line'>Planetiers Home Gathering (1) — Planetiers / TVI 24 <span class="eng-date">(Jun 2020)</span></div><div class='eng-sub'>Planetiers · Ensino em Portugal</div></li>
+        <li><div class='eng-line'>A Luta pelo Clima Durante a Pandemia — <a href="https://radiopublic.com/questionvel-mundo-novo-WYojNL/episodes" target="_blank" rel="noopener">Questionavel Mundo novo - Pedro Moniz</a> <span class="eng-date">(Jun 2020)</span></div><div class='eng-sub'>Lidera · O que os jovens querem Mundo sustentavel pos-covid</div></li>
+        <li><div class='eng-line'>O Planeta que queremos para o século 21 — <a href="https://www.facebook.com/fct.nova/videos/1399530523569720" target="_blank" rel="noopener">FCT Nova - Julia Seixas</a> <span class="eng-date">(Jun 2020)</span></div><div class='eng-sub'>Lidera · Sustentabilidade pos-covid</div></li>
+      </ul>
+    </div>
 
-      <h2>Experience</h2>
-      <ul>
-        <li>present past media engagements</li>
-        <li>present past engagements engagements</li>
+    <div class="eng-section-card">
+      <h3>Writing & Publications</h3>
+      <ul class="eng-list">
+        <li><div class='eng-line'>Article name — <a href="https://www.linkedin.com/feed/update/urn:li:activity:7288120234723450880/" target="_blank" rel="noopener">Impact Loop - Frey</a> <span class="eng-date">(Jan 2025)</span></div><div class='eng-sub'>Partner at Satgana and CDR expert · Carbon Removal Markets Satgana investments</div></li>
+        <li><div class='eng-line'>CDR report for Khuene Climate Foundation <span class="eng-date">(Dec 2024)</span></div><div class='eng-sub'>Individual · CDR trip in the GS challenged and opportunities</div></li>
+        <li><div class='eng-line'>CCn MArket Report 2023 — <a href="https://www.xprize.org/prizes/carbonremoval/articles/2023-circular-carbon-market-report-ccn?utm_source=Carbon+Removal+Master&utm_campaign=887d7328fb-EMAIL_CAMPAIGN_2021_08_09_08_26_COPY_02&utm_medium=email&utm_term=0_c6d47527df-887d7328fb-391633969" target="_blank" rel="noopener">Circular Carbon Network</a> <span class="eng-date">(Feb 2024)</span></div><div class='eng-sub'>CUR8 - curator · CDR</div></li>
+        <li><div class='eng-line'>CUR8 raise — <a href="https://www.eu-startups.com/2023/05/london-based-climate-tech-cur8-raises-e6-1-million-to-accelerate-the-carbon-removals-industry/" target="_blank" rel="noopener">CUR8</a> <span class="eng-date">(May 2023)</span></div><div class='eng-sub'>CUR8</div></li>
+        <li><div class='eng-line'>Investing in Women code - code — <a href="https://www.gov.uk/government/publications/the-annual-investing-in-women-code-report" target="_blank" rel="noopener">UKBAA</a> <span class="eng-date">(Apr 2021)</span></div><div class='eng-sub'>CRC · D&I</div></li>
+        <li><div class='eng-line'>Is Carbon neutral enough? Can corporates play a role in accelerating the momentum to a carbon negative economy? — <a href="https://carbonremovalcentre.com/is-carbon-neutral-enough/" target="_blank" rel="noopener">Carbon Removal Centre</a> <span class="eng-date">(Oct 2020)</span></div><div class='eng-sub'>CRC · Carbon Removal, corporates</div></li>
+        <li><div class='eng-line'>Prevenção de doenças – soluções no sistema de saneamento — <a href="https://www.valormagazine.pt/prevencao-de-doencas-solucoes-no-sistema-de-saneamento/" target="_blank" rel="noopener">Valor Magazine</a> <span class="eng-date">(Apr 2020)</span></div><div class='eng-sub'>Individual · Sustentabilidade - construcao</div></li>
+        <li><div class='eng-line'>Smart tank inventor Mixergy raises £3.6M Series A led by Foresight Williams — <a href="https://ecosummit.net/articles/smart-tank-inventor-mixergy-raises-3m-pound-series-a-led-by-foresight-williams" target="_blank" rel="noopener">Ecosummit</a> <span class="eng-date">(Feb 2020)</span></div><div class='eng-sub'>Ecosummit · Fundo levantado de startup em energia</div></li>
+        <li><div class='eng-line'>Carbon Crisis – Not solvable only by planting trees! — <a href="https://www.linkedin.com/pulse/carbon-crisis-solvable-only-planting-trees-patr%C3%ADc
 
+   
         
   <footer>
     © Patrícia Silva
