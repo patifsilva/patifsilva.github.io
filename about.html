@@ -9,9 +9,14 @@
   <style>
    :root{
   --dark-blue: #0B3A57;
-    --border: rgba(0,0,0,.10);
-    --text: rgba(0,0,0,.85);
-    --topbar-h: 52px;      
+  --border: rgba(0,0,0,.10);
+  --text: rgba(0,0,0,.85);
+  --topbar-h: 52px;
+
+  /* About page helpers */
+  --muted: rgba(0,0,0,.62);
+  --panel: rgba(0,0,0,.03);
+  --radius: 22px;
 }
 
 
@@ -93,15 +98,136 @@
     border-bottom-color: var(--dark-blue);
   }
 
+
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about-intro{
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 28px;
+  align-items: center;
+  background: var(--panel);
+  border-radius: var(--radius);
+  padding: 28px 28px 28px 0;
+  position: relative;
+  overflow: hidden;
+  margin-top: 18px;
+}
+
+.about-intro:before{
+  content:"";
+  position:absolute;
+  left: 0;
+  top: 18px;
+  bottom: 18px;
+  width: 6px;
+  background: var(--dark-blue);
+  border-radius: 0 12px 12px 0;
+}
+
+.about-intro-text{
+  padding-left: 28px;
+  font-size: 22px;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.about-intro-text p{ margin: 0; }
+
+.about-headshot{
+  width: 200px;
+  height: 200px;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #fff;
+  justify-self: end;
+}
+
+.about-headshot img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display:block;
+}
+
+.about-meta{
+  margin-top: 14px;
+  font-size: 16px;
+  color: var(--muted);
+}
+.about-meta strong{
+  color: var(--text);
+  font-weight: 600;
+}
+
+.about-cta{
+  margin-top: 12px;
+  font-size: 18px;
+}
+.about-cta a{
+  color: var(--dark-blue);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(11,58,87,.25);
+}
+.about-cta a:hover{
+  border-bottom-color: rgba(11,58,87,.55);
+}
+
+/* Sections (no pills/cards) */
+.about-section{
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+}
+
+.about-section h2{
+  font-size: 26px;
+  margin: 0 0 12px;
+  letter-spacing: -0.02em;
+}
+
+.about-section p{
+  margin: 0 0 12px;
+  font-size: 18px;
+  color: var(--text);
+}
+
+.about-muted{ color: var(--muted); }
+
+/* Responsive */
+@media (max-width: 780px){
+  .about-intro{
+    grid-template-columns: 1fr;
+    padding: 22px;
+  }
+  .about-intro:before{
+    top: 14px;
+    bottom: 14px;
+  }
+  .about-intro-text{
+    padding-left: 14px;
+    font-size: 20px;
+  }
+  .about-headshot{
+    justify-self: start;
+    width: 160px;
+    height: 160px;
+  }
+}
+
     
 .contact{
   text-align: center;
 }
 
   /* Responsive */
-  @engagements (max-width: 650px){
-    .nav{ gap: 18px; }
-  }
+ @media (max-width: 650px){
+  nav{ gap: 18px; }
+}
+n
 
     /* =========================
        ABOUT PAGE
@@ -148,30 +274,54 @@
 
   <!-- PAGE CONTENT -->
   <main>
-    <h1>About</h1>
-    
-    <p><strong>Hi - I’m Patricia.</strong></p>
+ <h1>About</h1>
+
+<section class="about-intro" aria-label="Intro">
+  <div class="about-intro-text">
+    <p>
+      I work at the intersection of climate strategy, carbon removal and carbon markets, and real-world project development.
+      My perspective is shaped by over eight years of experience as an operator, advisor, and investor, supporting decision-makers
+      navigating high-integrity climate action.
+    </p>
+
+    <div class="about-meta">
+      <strong>Previously:</strong> Patch, CUR8, 44.01.
+    </div>
+
+    <div class="about-cta">
+      <a href="/work.html">Explore how I support buyers, developers, and investors</a>
+    </div>
+  </div>
+
+  <div class="about-headshot">
+    <img src="/assets/headshot.jpg" alt="Portrait of Patricia">
+  </div>
+</section>
+
+<section class="about-section" aria-label="Background">
+  <h2>Background</h2>
 
   <p>
-    I’ve spent most of my career working in climate - and the last 8+ years specifically focused on carbon removal - not just behind spreadsheets, but also close to projects, developers, and buyers shaping this market.
+    I’ve spent most of my career working in climate - and the last 8+ years specifically focused on carbon removal and carbon markets.
+    I’ve supported both developers and buyers across the full lifecycle, including hands-on experience working within project developers
+    (e.g., 44.01): from integrity screening and MRV considerations, to portfolio strategy, pricing, contracting structures, and climate claims.
   </p>
 
   <p>
-    I’ve advised hundreds of carbon removal developers and worked with organisations purchasing removals, helping them navigate topics like MRV, durability, contracting, pricing, and climate claims - always with a focus on <strong>integrity and long-term value</strong>.
+    In 2024, I travelled extensively across the Global South, visiting projects and working on the ground with developers - an experience
+    that reinforced my conviction that climate solutions require both strong execution and strong narratives that enable action at scale.
   </p>
 
   <p>
-    In <strong>2024</strong>, I travelled extensively across the <strong>Global South</strong>, visiting projects and working on the ground with developers - an experience that reinforced how I see climate solutions: as something built through <strong>execution</strong>, not narratives.
+    I’ve lived and worked across multiple countries and markets, and I speak Portuguese (native), English (fluent),
+    Spanish (fluent), and French (advanced).
   </p>
 
-  <p>
-    Alongside advisory work, I’m a <strong>Venture Partner at Satgana</strong>, investing in early-stage climate solutions.
-  </p>
-
-  <p>
+  <p class="about-muted">
     If you’re working on carbon removal, carbon markets, or climate strategy - and looking for pragmatic, integrity-first support - I’d love to connect.
   </p>
 </section>
+
 
 
   <section id="contact" class="contact">
