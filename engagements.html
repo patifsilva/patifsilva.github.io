@@ -174,11 +174,11 @@
 .eng-photo{
   width: 100%;
   height: clamp(240px, 30vw, 360px);
-  object-fit: contain;      /* ✅ no cropping */
-  background: #fff;         /* fills empty space around image */
-  border-radius: 16px;
-  border: 1px solid rgba(0,0,0,.10);
-  box-shadow: 0 10px 22px rgba(0,0,0,.06);
+  object-fit: contain;   /* no cropping */
+  border-radius: 0;      /* remove rounded corners */
+  border: none;          /* remove border box */
+  box-shadow: none;      /* remove shadow */
+  background: transparent;
 }
 
 @media (min-width: 860px){
