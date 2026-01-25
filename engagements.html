@@ -150,6 +150,42 @@
       h1{ font-size: 28px; }
       .nav{ gap: 18px; }
     }
+
+/* =========================
+   ENGAGEMENTS PHOTOS
+========================= */
+
+.eng-hero-photo{
+  width: 100%;
+  height: auto;
+  margin: 12px 0 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(0,0,0,.10);
+  box-shadow: 0 12px 26px rgba(0,0,0,.06);
+}
+
+.eng-photo-pair{
+  margin: 18px 0 22px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.eng-photo{
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,.10);
+  box-shadow: 0 10px 22px rgba(0,0,0,.06);
+}
+
+@media (min-width: 860px){
+  .eng-photo-pair{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+    
   </style>
 </head>
 
@@ -175,7 +211,11 @@
   <!-- PAGE CONTENT -->
   <main>
     <h1>Engagements</h1>
-    
+    <img
+  src="/assets/engagem1-pic.jpeg"
+  alt="Engagements"
+  class="eng-hero-photo"
+/>
     <section id="engagements" class="section">
   <p class="section-subtitle">
     Selected engagements across carbon removal, climate strategy, and climate tech.
@@ -213,6 +253,11 @@
       <li><span class="eng-entity">Carbon Removal Centre (CRC):</span> MODERATOR: Intro to the CRC (Sep 2019)</li>
     </ul>
   </div>
+      
+<div class="eng-photo-pair">
+  <img src="/assets/engagem3-pic.jpeg" alt="Engagement photo" class="eng-photo" />
+  <img src="/assets/engagem2-pic.png" alt="Engagement photo" class="eng-photo" />
+</div>
 
   <!-- Writing & Publications -->
   <div class="eng-block">
