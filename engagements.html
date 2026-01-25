@@ -171,13 +171,18 @@
   gap: 12px;
 }
 
+.eng-photo-wrap{
+  border-radius: 18px;     /* ✅ curve on the image */
+  overflow: hidden;        /* ✅ forces clipping */
+}
+
 .eng-photo{
   width: 100%;
   height: clamp(240px, 30vw, 360px);
-  object-fit: contain;   /* no cropping */
-  border-radius: 12px;   /* ✅ rounded corners like hero */
-  border: none;          /* remove border box */
-  box-shadow: none;      /* remove shadow */
+  object-fit: contain;     /* no cropping */
+  display: block;          /* removes inline gap */
+  border: none;
+  box-shadow: none;
   background: transparent;
 }
 
@@ -186,7 +191,6 @@
     grid-template-columns: 1fr 1fr;
   }
 }
-
     
   </style>
 </head>
@@ -257,8 +261,13 @@
   </div>
       
 <div class="eng-photo-pair">
-  <img src="/assets/engagem3-pic.jpeg" alt="Engagement photo" class="eng-photo" />
-  <img src="/assets/engagem2-pic.png" alt="Engagement photo" class="eng-photo" />
+  <div class="eng-photo-wrap">
+    <img src="/assets/engagemen 3-pic.jpeg" alt="Engagement photo" class="eng-photo" />
+  </div>
+
+  <div class="eng-photo-wrap">
+    <img src="/assets/engagem 2-pic.png" alt="Engagement photo" class="eng-photo" />
+  </div>
 </div>
 
   <!-- Writing & Publications -->
