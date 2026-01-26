@@ -14,6 +14,8 @@
       --topbar-h: 52px;
     }
 
+    *{ box-sizing: border-box; }
+
     body{
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       max-width: 800px;
@@ -105,7 +107,7 @@
     }
 
     .subtitle{
-      margin: 0 0 26px;
+      margin: 0 0 24px;
       font-size: 16px;
       line-height: 1.6;
       color: rgba(0,0,0,.65);
@@ -114,14 +116,20 @@
 
     @media (max-width: 650px){
       h1{ font-size: 28px; }
-      .nav{ gap: 18px; }
     }
 
     /* =========================
-       ADVISORY CONTENT
+       ADVISORY BLOCKS
     ========================= */
     .eng-block{
       margin-top: 26px;
+    }
+
+    .eng-block h2{
+      margin: 0 0 10px 0;
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: rgba(0,0,0,.90);
     }
 
     .eng-block h3{
@@ -142,8 +150,47 @@
       color: rgba(0,0,0,.85);
     }
 
-    .eng-entity{
-      font-weight: 800;
+    /* =========================
+       WHO I ADVISE – 2 COLUMNS
+    ========================= */
+    .who-grid{
+      margin-top: 18px;
+      display: grid;
+      gap: 18px;
+      grid-template-columns: 1fr;
+    }
+
+    .who-card{
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px 18px 16px;
+      background: #fff;
+      box-shadow: 0 8px 26px rgba(0,0,0,.04);
+    }
+
+    .who-card h3{
+      margin: 0 0 10px 0;
+      font-size: 1.05rem;
+      font-weight: 900;
+      color: rgba(0,0,0,.88);
+    }
+
+    .who-card ul{
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .who-card li{
+      margin: 10px 0;
+      line-height: 1.55;
+      font-size: 0.98rem;
+      color: rgba(0,0,0,.85);
+    }
+
+    @media (min-width: 860px){
+      .who-grid{
+        grid-template-columns: 1fr 1fr;
+      }
     }
 
     /* =========================
@@ -204,31 +251,65 @@
   <!-- PAGE CONTENT -->
   <main>
     <h1>Advisory</h1>
+
     <p class="subtitle">
-      I support organisations and investors navigating carbon removal, climate strategy, and credible claims — combining scientific depth with market and commercial expertise.
+      I advise organisations on carbon removal, voluntary carbon markets, and climate strategy - bringing an operator’s lens to how climate solutions are built, financed, and scaled.<br>
+      I provide both strategic advisory and hands-on support, from analysis to execution.<br>
+      My work spans the ecosystem, supporting buyers, project developers, investors, and institutions. I’ve worked across both the supplier and buyer sides, including hands-on experience within project developers (44.01), and previously at Patch and CUR8.
     </p>
 
     <div class="eng-block">
-      <h3>Focus areas</h3>
-      <ul class="eng-list">
-        <li><span class="eng-entity">Carbon removal sourcing</span> (portfolio construction, supplier selection, risk review)</li>
-        <li><span class="eng-entity">Procurement strategy</span> (spot vs forward, volumes, contracting structures)</li>
-        <li><span class="eng-entity">Claims & communications</span> (credible positioning aligned with best practice)</li>
-        <li><span class="eng-entity">Project / methodology diligence</span> (durability, MRV, integrity, delivery risk)</li>
-      </ul>
+      <h2>Who I advise</h2>
+      <p class="subtitle" style="margin-top:0;">
+        I also support public and philanthropic institutions working on climate strategy and market-building.
+      </p>
+
+      <!-- 2-column grid -->
+      <div class="who-grid">
+        <div class="who-card">
+          <h3>Corporates</h3>
+          <ul>
+            <li>Strategy for carbon removal and voluntary carbon markets</li>
+            <li>Procurement and portfolio construction</li>
+            <li>Credit quality and integrity assessment (incl. MRV and delivery risk)</li>
+            <li>Contracting and supplier engagement decision support</li>
+            <li>Narrative support for credible climate action</li>
+          </ul>
+        </div>
+
+        <div class="who-card">
+          <h3>Project developers</h3>
+          <ul>
+            <li>Commercial and go-to-market strategy</li>
+            <li>Offtake readiness and buyer engagement</li>
+            <li>Investment readiness and fundraising positioning</li>
+            <li>MRV and integrity translated into buyer-ready positioning</li>
+            <li>Partnerships, commercial structuring, and market benchmarking</li>
+          </ul>
+        </div>
+
+        <div class="who-card">
+          <h3>Investors, funds & accelerators</h3>
+          <ul>
+            <li>Market mapping and diligence support across pathways</li>
+            <li>Integrity screening and underwriting of delivery risk</li>
+            <li>Commercial assessment: pricing dynamics, buyer segments, scale potential</li>
+            <li>Founder support on go-to-market narrative and positioning</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <div class="eng-block">
-      <h3>Typical advisory engagements</h3>
+      <h2>Representative examples</h2>
       <ul class="eng-list">
-        <li>Carbon removal procurement roadmap (3–12 months)</li>
-        <li>Shortlist + diligence support of CDR suppliers</li>
-        <li>Buyer education workshop (internal teams, leadership)</li>
-        <li>Support for investment thesis or IC memo review</li>
+        <li>Supporting a buyer in building a carbon removal approach aligned with integrity, procurement realities, and credible claims - including supplier assessment and contracting considerations.</li>
+        <li>Working with a project developer to strengthen commercial readiness: positioning, partnership strategy, and what matters most to buyers in real procurement processes.</li>
+        <li>Advising investors on the integrity and commercial viability of carbon removal pathways, with an underwriting lens on delivery, verification and scale risk.</li>
       </ul>
     </div>
 
-    <!-- MINI CONTACT SECTION (as you requested) -->
+    <!-- MINI CONTACT SECTION -->
     <section id="contact" class="contact">
       <h2>Get in touch</h2>
 
@@ -247,6 +328,7 @@
         <a href="contact.html">Let's discuss opportunities</a>.
       </p>
     </section>
+
   </main>
 
   <footer>
@@ -264,4 +346,3 @@
 
 </body>
 </html>
-
