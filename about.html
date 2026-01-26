@@ -529,6 +529,15 @@ My experience spans the full ecosystem - from supplier and buyer perspectives to
   <footer>
     © Patrícia Silva
   </footer>
-        
+
+    <script>
+  // Auto-highlight current page in navbar
+  const here = location.pathname.split("/").pop() || "index.html";
+  document.querySelectorAll(".nav__link").forEach(a => {
+    const target = (a.getAttribute("href") || "").split("/").pop();
+    if (target === here) a.setAttribute("aria-current", "page");
+  });
+</script>
+    
 </body>
 </html>
