@@ -364,7 +364,6 @@ n
 }
 
 
-  
     
 /* FORCE ABOUT LAYOUT */
 .about-top{
@@ -389,6 +388,26 @@ n
 @media (max-width: 760px){
   .about-top{
     grid-template-columns: 1fr !important;
+  }
+}
+
+
+@media (max-width: 760px){
+
+  /* stop cropping photos in image tiles on mobile */
+  .about-gallery a,
+  .about-gallery img{
+    height: auto;
+  }
+
+  .about-gallery a{
+    aspect-ratio: auto;
+  }
+
+  .about-gallery img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 }
 
