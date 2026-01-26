@@ -1,1 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo-icon-32.png">
+  <meta charset="UTF-8" />
+  <title>Advisory – Patrícia Silva</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    :root{
+      --dark-blue: #0B3A57;
+      --border: rgba(0,0,0,.10);
+      --text: rgba(0,0,0,.85);
+      --topbar-h: 52px;
+    }
+
+    body{
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0.5cm 0px 60px;
+      color: var(--text);
+      background: #fff;
+    }
+
+    /* =========================
+       TOP NAV BAR
+    ========================= */
+    .topbar{
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .topbar__inner{
+      height: var(--topbar-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand{
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      flex: 0 0 auto;
+    }
+
+    .brand__logo{
+      height: 40px;
+      width: auto;
+      display: block;
+    }
+
+    .nav{
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      justify-content: flex-end;
+      flex: 1 1 auto;
+      white-space: nowrap;
+    }
+
+    .nav__link{
+      text-decoration: none;
+      font-family: inherit;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: .12em;
+      color: var(--dark-blue);
+      padding: 10px 2px;
+      border-bottom: 2px solid transparent;
+    }
+
+    .nav__link:hover{
+      opacity: 0.85;
+    }
+
+    .nav__link[aria-current="page"]{
+      border-bottom-color: var(--dark-blue);
+    }
+
+    /* Responsive */
+    @media (max-width: 650px){
+      .nav{ gap: 18px; }
+    }
+
+    /* =========================
+       PAGE
+    ========================= */
+    main{
+      padding-top: 44px;
+    }
+
+    h1{
+      font-size: 34px;
+      font-weight: 600;
+      margin: 0 0 12px;
+      color: rgba(0,0,0,.90);
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle{
+      margin: 0 0 26px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: rgba(0,0,0,.65);
+      max-width: 760px;
+    }
+
+    @media (max-width: 650px){
+      h1{ font-size: 28px; }
+      .nav{ gap: 18px; }
+    }
+
+    /* =========================
+       ADVISORY CONTENT
+    ========================= */
+    .eng-block{
+      margin-top: 26px;
+    }
+
+    .eng-block h3{
+      margin: 0 0 10px 0;
+      font-size: 1.05rem;
+      font-weight: 800;
+    }
+
+    .eng-list{
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .eng-list li{
+      margin: 10px 0;
+      line-height: 1.55;
+      font-size: 0.98rem;
+      color: rgba(0,0,0,.85);
+    }
+
+    .eng-entity{
+      font-weight: 800;
+    }
+
+    /* =========================
+       CONTACT MINI SECTION
+    ========================= */
+    .contact{
+      text-align: center;
+      margin-top: 52px;
+    }
+
+    .contact__intro{
+      margin-top: 12px;
+      font-size: 0.98rem;
+    }
+
+    .contact__intro a{
+      color: var(--dark-blue);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(11,58,87,.25);
+      padding-bottom: 2px;
+    }
+
+    .contact__intro a:hover{
+      opacity: 0.85;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+    footer{
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: #666;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP NAV -->
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <img class="brand__logo" src="/assets/logo-icon-32.png" alt="Logo" />
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="nav__link" href="index.html">Home</a>
+        <a class="nav__link" href="about.html">About</a>
+        <a class="nav__link" href="advisory.html">Advisory</a>
+        <a class="nav__link" href="engagements.html">Engagements</a>
+        <a class="nav__link" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE CONTENT -->
+  <main>
+    <h1>Advisory</h1>
+    <p class="subtitle">
+      I support organisations and investors navigating carbon removal, climate strategy, and credible claims — combining scientific depth with market and commercial expertise.
+    </p>
+
+    <div class="eng-block">
+      <h3>Focus areas</h3>
+      <ul class="eng-list">
+        <li><span class="eng-entity">Carbon removal sourcing</span> (portfolio construction, supplier selection, risk review)</li>
+        <li><span class="eng-entity">Procurement strategy</span> (spot vs forward, volumes, contracting structures)</li>
+        <li><span class="eng-entity">Claims & communications</span> (credible positioning aligned with best practice)</li>
+        <li><span class="eng-entity">Project / methodology diligence</span> (durability, MRV, integrity, delivery risk)</li>
+      </ul>
+    </div>
+
+    <div class="eng-block">
+      <h3>Typical advisory engagements</h3>
+      <ul class="eng-list">
+        <li>Carbon removal procurement roadmap (3–12 months)</li>
+        <li>Shortlist + diligence support of CDR suppliers</li>
+        <li>Buyer education workshop (internal teams, leadership)</li>
+        <li>Support for investment thesis or IC memo review</li>
+      </ul>
+    </div>
+
+    <!-- MINI CONTACT SECTION (as you requested) -->
+    <section id="contact" class="contact">
+      <h2>Get in touch</h2>
+
+      <p>
+        <a href="https://www.linkedin.com/in/patriciafsilva/"
+           target="_blank"
+           rel="noopener">
+          <img src="/assets/linkedin-icon.jpeg"
+               alt="LinkedIn profile"
+               width="40"
+               style="vertical-align: middle;">
+        </a>
+      </p>
+
+      <p class="contact__intro">
+        <a href="contact.html">Let's discuss opportunities</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © Patrícia Silva
+  </footer>
+
+  <script>
+    // Auto-highlight current page in navbar
+    const here = location.pathname.split("/").pop() || "index.html";
+    document.querySelectorAll(".nav__link").forEach(a => {
+      const target = (a.getAttribute("href") || "").split("/").pop();
+      if (target === here) a.setAttribute("aria-current", "page");
+    });
+  </script>
+
+</body>
+</html>
 
