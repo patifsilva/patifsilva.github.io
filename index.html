@@ -95,6 +95,10 @@
     color: #666;
   }
 
+    :root{
+  --dark-blue: #0B3A57;
+}
+
   /* HERO */
   .hero-block {
     max-width: 1100px;
@@ -191,49 +195,29 @@
 
     
    /* - CSS - Auto-highlight current page in navbar - */ 
-   .nav__link{
-      text-decoration: none;
-      font-family: inherit;
-      font-weight: 400;
-      text-transform: uppercase;
-      font-size: 14px;
-      letter-spacing: .12em;
-      color: var(--dark-blue);
-      padding: 10px 2px;
-      border-bottom: 2px solid transparent;
-    }
+ .nav__link{
+  text-decoration: none;
+  font-family: inherit;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: .12em;
+  color: var(--dark-blue);
+  padding: 10px 2px;
+  border-bottom: 2px solid transparent;
+}
 
-    .nav__link:hover{
-      opacity: 0.85;
-    }
+.nav__link:hover{ opacity: 0.85; }
 
-    .nav__link[aria-current="page"]{
-      border-bottom-color: var(--dark-blue);
-  /* -- */ 
-
+.nav__link[aria-current="page"]{
+  border-bottom-color: var(--dark-blue);
+}
 
   
 }
 
 </style>
 </head>
-
-<script>
-   /* - Auto-highlight current page in navbar - */ 
-  const here = location.pathname.split("/").pop() || "index.html";
-
-  document.querySelectorAll(".nav__link").forEach(link => {
-    const target = (link.getAttribute("href") || "").split("/").pop();
-    if (target === here) {
-      link.setAttribute("aria-current", "page");
-    } else {
-      link.removeAttribute("aria-current");
-    }
-  });
-    /* -- */ 
-
-</script>
-
   
 <body>
   <!-- TOP NAV BAR -->
