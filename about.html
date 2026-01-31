@@ -229,9 +229,6 @@
 }
 n
 
-   /* =========================
-   ABOUT PAGE (new layout)
-========================= */
 
 /* =========================
    ABOUT PAGE
@@ -283,7 +280,6 @@ n
   line-height: 1.7;
   color: var(--text);
 }
-
     /* Make Education bullet list match paragraph styling */
 .about-block ul{
   margin: 0 0 12px;
@@ -364,7 +360,6 @@ n
 }
 
 
-    
 /* FORCE ABOUT LAYOUT */
 .about-top{
   display: grid !important;
@@ -390,8 +385,37 @@ n
     grid-template-columns: 1fr !important;
   }
 }
+/* --*/
+@media (max-width: 650px){
 
+  /* Let the header grow taller if needed */
+  .topbar__inner{
+    height: auto;              /* overrides fixed 52px */
+    padding: 10px 0;           /* breathing room */
+    align-items: center;
+    gap: 12px;
+  }
 
+  /* Allow the nav links to wrap instead of overflowing right */
+  .nav{
+    flex-wrap: wrap;           /* key change */
+    justify-content: flex-end;
+    white-space: normal;       /* remove nowrap behaviour */
+    gap: 10px 16px;            /* row gap / column gap */
+  }
+
+  .nav__link{
+    font-size: 12px;           /* slightly smaller for mobile */
+    padding: 6px 0;
+    letter-spacing: .10em;
+  }
+
+  .brand__logo{
+    height: 34px;              /* optional: slightly smaller logo */
+  }
+}
+/* --*/
+    
 @media (max-width: 760px){
 
   /* stop cropping photos in image tiles on mobile */
