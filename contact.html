@@ -87,6 +87,9 @@
     /* =========================
        CONTACT PAGE
     ========================= */
+    /* Keep paddings from causing right-side overflow */
+
+
     main{
       padding-top: 44px;
     }
@@ -190,12 +193,27 @@
     gap: 20px;
   }
 
+    *,
+*::before,
+*::after { box-sizing: border-box; }
+
+    /* Make a row item span both columns (full width) */
+.field.full {
+  grid-column: 1 / -1;
+}
+
+/* Invisible spacer to “occupy” the right column */
+.field.spacer {
+  visibility: hidden;
+}
+    
   /* Row of 3 fields on desktop */
   .form-row {
   display: grid;
-  grid-template-columns: auto auto;
-  column-gap: 1cm; 
+  grid-template-columns: 1fr 1fr;   /* equal columns */
+  column-gap: 24px;                /* consistent spacing */
 }
+
 
   /* Labels (inside panel) */
   .form-panel .field label {
@@ -367,6 +385,8 @@
   </div>
 
   <!-- Row 2: Email (full width) -->
+  <!-- Row 2: Email (same width as First name) -->
+<div class="form-row">
   <div class="field">
     <label for="email">Email</label>
     <input
@@ -379,8 +399,12 @@
     >
   </div>
 
+  <div class="field spacer" aria-hidden="true"></div>
+</div>
+
+
   <!-- Row 3: Message -->
-  <div class="field">
+<div class="field full">
     <label for="message">Message</label>
     <textarea
       id="message"
