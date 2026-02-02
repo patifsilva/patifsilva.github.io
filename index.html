@@ -241,9 +241,46 @@
   border-bottom-color: var(--dark-blue);
 }
 
-  
+}
+/* =========================
+   HOMEPAGE CLIENT LOGOS
+   (no conflict with navbar .logo)
+========================= */
+
+.client-logos{
+  margin-top: 28px;
 }
 
+.client-logos-title{
+  font-size: 14px;
+  color: rgba(0,0,0,.65);
+  margin: 0 0 10px;
+}
+
+.client-logos-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 18px;
+  align-items: center;
+}
+
+.client-logo{
+  width: 100%;
+  max-width: 140px;   /* controls overall size */
+  height: 42px;       /* force same height */
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  opacity: 0.90;
+  filter: grayscale(100%);
+}
+
+.client-logo:hover{
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+    
 </style>
 </head>
   
@@ -317,6 +354,18 @@
     <li>Judge at the world’s largest cleantech accelerator</li>
     <li>On-the-ground experience across Global North and Global South projects</li>
   </ul>
+
+<section class="client-logos">
+  <p class="client-logos-title">Selected collaborations</p>
+
+  <div class="client-logos-grid">
+    <img src="/assets/logo1.png" alt="Logo 1" class="client-logo" loading="lazy" />
+    <img src="/assets/logo2.png" alt="Logo 2" class="client-logo" loading="lazy" />
+    <img src="/assets/logo3.png" alt="Logo 3" class="client-logo" loading="lazy" />
+    <img src="/assets/logo4.png" alt="Logo 4" class="client-logo" loading="lazy" />
+  </div>
+</section>
+
   
   <section id="contact" class="contact">
   <h2>Get in touch</h2>
