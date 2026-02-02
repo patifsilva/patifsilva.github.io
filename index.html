@@ -241,10 +241,8 @@
   border-bottom-color: var(--dark-blue);
 }
 
-}
 /* =========================
-   HOMEPAGE CLIENT LOGOS
-   (no conflict with navbar .logo)
+   HOMEPAGE CLIENT LOGOS (ROW GROUPS)
 ========================= */
 
 .client-logos{
@@ -257,21 +255,37 @@
   margin: 0 0 10px;
 }
 
-.client-logos-grid{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 18px;
-  align-items: center;
+/* the whole pack */
+.logos-pack{
+  width: 100%;
 }
+
+/* each row */
+.logos-row{
+  display: grid;
+  width: 100%;
+  align-items: center;
+  margin: 16px 0;
+  column-gap: 24px;
+  row-gap: 14px;
+
+  /* this is what makes rows align “left and right” across full width */
+  justify-content: space-between;
+}
+
+.logos-row.r3{ grid-template-columns: repeat(3, 1fr); }
+.logos-row.r4{ grid-template-columns: repeat(4, 1fr); }
+.logos-row.r7{ grid-template-columns: repeat(7, 1fr); }
 
 .client-logo{
   width: 100%;
-  max-width: 140px;   /* controls overall size */
-  height: 42px;       /* force same height */
+  height: 46px;          /* uniform height */
+  max-width: 160px;      /* prevents very wide logos */
   object-fit: contain;
   display: block;
-  margin: 0 auto;
-  opacity: 0.90;
+  margin: 0 auto;        /* centres within each column */
+
+  opacity: 0.95;
   filter: grayscale(100%);
 }
 
@@ -279,6 +293,19 @@
   opacity: 1;
   filter: grayscale(0%);
 }
+
+/* Mobile: avoid tiny logos in 7-wide row */
+@media (max-width: 720px){
+  .logos-row.r7{ grid-template-columns: repeat(3, 1fr); }
+  .logos-row.r4{ grid-template-columns: repeat(2, 1fr); }
+  .logos-row.r3{ grid-template-columns: repeat(2, 1fr); }
+
+  .client-logo{
+    height: 42px;
+    max-width: 150px;
+  }
+}
+
 
     
 </style>
@@ -355,15 +382,55 @@
     <li>On-the-ground experience across Global North and Global South projects</li>
   </ul>
 
-<section class="client-logos">
-  <p class="client-logos-title">Selected collaborations</p>
+  <section class="client-logos">
+  <p class="client-logos-title">Selected experience & affiliations</p>
 
-  <div class="client-logos-grid">
-    <img src="/assets/logo1.png" alt="Logo 1" class="client-logo" loading="lazy" />
-    <img src="/assets/logo2.png" alt="Logo 2" class="client-logo" loading="lazy" />
-    <img src="/assets/logo3.png" alt="Logo 3" class="client-logo" loading="lazy" />
-    <img src="/assets/logo4.png" alt="Logo 4" class="client-logo" loading="lazy" />
+  <div class="logos-pack">
+
+    <!-- Row 1 (4) -->
+    <div class="logos-row r4">
+      <img src="/assets/logo-accenture.png" alt="Accenture" class="client-logo">
+      <img src="/assets/logo-patch.png" alt="Patch" class="client-logo">
+      <img src="/assets/logo-cur8.png" alt="CUR8" class="client-logo">
+      <img src="/assets/logo-4401.png" alt="44.01" class="client-logo">
+    </div>
+
+    <!-- Row 2 (3) -->
+    <div class="logos-row r3">
+      <img src="/assets/logo-kuehne-foundation.png" alt="Kuehne Foundation" class="client-logo">
+      <img src="/assets/logo-websummit.png" alt="Web Summit" class="client-logo">
+      <img src="/assets/logo-satgana.png" alt="Satgana" class="client-logo">
+    </div>
+
+    <!-- Row 3 (3) -->
+    <div class="logos-row r3">
+      <img src="/assets/logo-berkeley-haas.png" alt="Berkeley Haas" class="client-logo">
+      <img src="/assets/logo-imperial.png" alt="Imperial College London" class="client-logo">
+      <img src="/assets/logo-cambridge-cisl.png" alt="University of Cambridge (CISL)" class="client-logo">
+    </div>
+
+    <!-- Row 4 (4) -->
+    <div class="logos-row r4">
+      <img src="/assets/logo-airminers.png" alt="AirMiners" class="client-logo">
+      <img src="/assets/logo-green-angel.png" alt="Green Angel Syndicate" class="client-logo">
+      <img src="/assets/logo-bmw-foundation.png" alt="BMW Foundation Responsible Leaders" class="client-logo">
+      <img src="/assets/logo-carbon-removal-centre.png" alt="Carbon Removal Centre" class="client-logo">
+    </div>
+
+    <!-- Row 5 (7) -->
+    <div class="logos-row r7">
+      <img src="/assets/logo-jose-de-mello.png" alt="José de Mello" class="client-logo">
+      <img src="/assets/logo-ukbaa.png" alt="UKBAA" class="client-logo">
+      <img src="/assets/logo-founders-factory.png" alt="Founders Factory" class="client-logo">
+      <img src="/assets/logo-work-on-climate.png" alt="Work on Climate" class="client-logo">
+      <img src="/assets/logo-carbon-removal-show.png" alt="The Carbon Removal Show" class="client-logo">
+      <img src="/assets/logo-cleantech-open.png" alt="Cleantech Open" class="client-logo">
+      <img src="/assets/logo-ecosummit.png" alt="Ecosummit" class="client-logo">
+    </div>
+
   </div>
+</section>
+
 </section>
 
   
