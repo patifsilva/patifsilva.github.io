@@ -285,13 +285,17 @@
   display: block;
   margin: 0 auto;        /* centres within each column */
 
-  opacity: 0.95;
-  filter: grayscale(50%);
+  opacity: 1;
+  filter: none;
+    transition: transform .15s ease, opacity .15s ease;
+
 }
 
 .client-logo:hover{
   opacity: 1;
-  filter: grayscale(0%);
+  filter: none;
+    transform: translateY(-2px);
+
 }
 
 /* Mobile: avoid tiny logos in 7-wide row */
